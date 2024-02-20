@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MatesLikeHovis/Country-flag-quiz-react/static/css/main.7879c254.css",
+    "main.js": "/MatesLikeHovis/Country-flag-quiz-react/static/js/main.e6cb3d48.js",
+    "static/js/453.23c9be58.chunk.js": "/MatesLikeHovis/Country-flag-quiz-react/static/js/453.23c9be58.chunk.js",
+    "index.html": "/MatesLikeHovis/Country-flag-quiz-react/index.html",
+    "main.7879c254.css.map": "/MatesLikeHovis/Country-flag-quiz-react/static/css/main.7879c254.css.map",
+    "main.e6cb3d48.js.map": "/MatesLikeHovis/Country-flag-quiz-react/static/js/main.e6cb3d48.js.map",
+    "453.23c9be58.chunk.js.map": "/MatesLikeHovis/Country-flag-quiz-react/static/js/453.23c9be58.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7879c254.css",
+    "static/js/main.e6cb3d48.js"
+  ]
+}
