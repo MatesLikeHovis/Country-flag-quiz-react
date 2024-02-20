@@ -1,0 +1,30 @@
+.headerBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flagBox {
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: 300px 300px;
+    grid-gap: 10px;
+    margin-top: 70px;
+}
+
+.flagItem {
+    list-style: none;
+    object-fit: contain;
+}
+
+.flag {
+    border: 5px black solid;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
