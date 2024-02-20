@@ -24,12 +24,7 @@ function Questions(props) {
         return countryNumber;
     }
 
-    const pickCountry = () => {
-        let countryNumber = Math.floor(Math.random() * 4);
-        setQuestionCountry(flagSet[countryNumber].country);
-        setQuestionIndex(countryNumber);
-        setIsQuestionPrepped(true);
-    }
+
 
     useEffect(() => {
         const getCountryAPI = async () => {
@@ -57,7 +52,7 @@ function Questions(props) {
         if (!isFetched && !isCountryPicked && !isQuestionPrepped) {
         getCountryAPI();
         }
-        
+        // eslint-disable-next-line
     },[reset])
 
     const noData = <p>There is no data yet.</p>
@@ -109,7 +104,7 @@ function Questions(props) {
                 <ul className={styles.flagBox}>
                     {flagSet.map((item, index) => (
                         <li className={styles.flagItem}>
-                            <img onClick={handleClick} className={styles.flag} src={item.flag} id={index} />
+                            <img onClick={handleClick} className={styles.flag} src={item.flag} id={index} alt=""/>
                         </li>
                     ))}
                 </ul>
@@ -117,6 +112,7 @@ function Questions(props) {
                 </>
             ));
         }
+    // eslint-disable-next-line
     }, [flagSet, isFetched]);
 
     useEffect(() => {
@@ -134,6 +130,12 @@ function Questions(props) {
     }, [questionCountry, flagSet, isQuestionPrepped, score, questionsAsked]);
 
     useEffect(() => {
+        const pickCountry = () => {
+            let countryNumber = Math.floor(Math.random() * 4);
+            setQuestionCountry(flagSet[countryNumber].country);
+            setQuestionIndex(countryNumber);
+            setIsQuestionPrepped(true);
+        }
         if (isFetched) {
             pickCountry();
             setIsCountryPicked(true);
@@ -148,7 +150,7 @@ function Questions(props) {
         if (isAnswered) {
             setQuestionsAsked(prev=>prev+1);
             console.log("isAnswered UseEffect triggered")
-            if (answerIndex==questionIndex) {
+            if (answerIndex===questionIndex) {
                 setScore(score + 1);
                 answerText = "CORRECT!!!!!";
                 answerStyling = styles.correct
@@ -171,7 +173,7 @@ function Questions(props) {
                 </>)
             })
         }
-        
+        // eslint-disable-next-line
     }, [isAnswered])
 
     return (
